@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='shapes',
-      version='0.1',
+      version='0.1.1',
       description='Tools for analyzing geometric morphometic shape',
       url='http://github.com/DominicWhite/shapes',
       author='Dominic White',
