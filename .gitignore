@@ -1,6 +1,7 @@
 #any weird py files
 *.py~
 *.pyc
+*~
 
 # Setuptools distribution folder.
 /dist/
