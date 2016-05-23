@@ -44,12 +44,15 @@ class ShapeSet:
         print "%i shapes of %i landmarks" %(self.n_shapes, self.n_lm)
     
     
-    def export(self, filename, filetype='csv'):
+    def export(self, filename, filetype='csv', rownames=None):
         f = open(filename, 'w')
         if filetype=='csv':
             csvwriter = csv.writer(f)
             for t in self.shapes.keys():
-                row = [t]
+                if rownames==None:
+                    row = [t]
+                else:
+                    row=[rownames[t]]
                 for lm in self.shapes[t].landmarks:
                     row = row+lm
                 csvwriter.writerow(row)

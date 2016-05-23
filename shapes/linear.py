@@ -87,7 +87,7 @@ def average_dist_between_point_pairs(pts_pairs):
     if len(dists)>0:
         return sum(dists)/float(len(dists))
     else:
-        return nan
+        return float('nan')
 
 
 def point_present(pt):
@@ -106,7 +106,7 @@ def average_point(raw_pts):
     if len(pts)==1:
         return pts[0]
     elif len(pts)==0:
-        return [nan for c in raw_pts[0]]
+        return [float('nan') for c in raw_pts[0]]
     else:
         average = [0 for c in pts[0]]
         count = 0
